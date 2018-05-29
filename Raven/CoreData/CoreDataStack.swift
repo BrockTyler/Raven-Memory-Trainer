@@ -7,3 +7,21 @@
 //
 
 import Foundation
+import CoreData
+
+
+class CoreDataStack {
+    
+    static let container: NSPersistentContainer = {
+        
+        let container = NSPersistentContainer(name: "RavenCoreData")
+        container.loadPersistentStores() { (storeDescription, error) in
+            if let error = error as NSError? {
+                fatalError("Unresolved error \(error), \(error.userInfo)")
+            }
+        }
+        return container
+    }()
+    
+    static var context: NSManagedObjectContext { return container.viewContext }
+}

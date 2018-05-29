@@ -10,15 +10,48 @@ import UIKit
 
 class PassageTableViewCell: UITableViewCell {
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var creationDateLabel: UILabel!
+    
+    var passage: Passage? {
+        didSet {
+            updateViews()
+        }
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    
+    func updateViews() {
+        
+        guard let passage = passage else { return }
+        
+        var displayDate = ""
+        
+        if passage.wasPracticed == false && PassageListTableViewController.practiceView == false {
+            if let date = passage.creationDate {
+                displayDate = "\(date)"
+                displayDate = DateHelper.dateFormatter.string(from: date)
+                creationDateLabel.textColor = .black
+            }
+        } else if passage.wasPracticed == false && PassageListTableViewController.practiceView == true {
+            if let date = passage.creationDate {
+                displayDate = "Not Practiced"
+                creationDateLabel.textColor = .red
+            }
+        } else if passage.wasPracticed == true && PassageListTableViewController.practiceView == true {
+            if let date = passage.practiceDate {
+                displayDate = "\(date)"
+                displayDate = "Practiced on: \(DateHelper.dateFormatter.string(from: date))"
+                creationDateLabel.textColor = .black
+            }
+        } else {
+            if let date = passage.creationDate {
+                displayDate = "\(date)"
+                displayDate = DateHelper.dateFormatter.string(from: date)
+                creationDateLabel.textColor = .black
+            }
+        }
+        
+        titleLabel.text = passage.title
+        creationDateLabel.text = displayDate
+        
     }
-
 }

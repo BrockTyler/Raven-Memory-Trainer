@@ -7,3 +7,18 @@
 //
 
 import Foundation
+
+class DateHelper {
+    
+    static let dateFormatter: DateFormatter = {
+        
+        let formatter = DateFormatter()
+        
+        formatter.dateStyle = .medium
+        formatter.timeStyle = .none
+        
+        formatter.locale = Locale(identifier: "en_US")
+        
+        return formatter
+    }()
+}

@@ -7,3 +7,14 @@
 //
 
 import Foundation
+
+class SmartString {
+    
+    var value: String
+    var isPunctuation: Bool
+    
+    init(value: String, isPunctuation: Bool) {
+        self.value = value
+        self.isPunctuation = isPunctuation
+    }
+}

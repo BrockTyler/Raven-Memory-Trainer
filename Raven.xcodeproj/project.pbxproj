@@ -8,20 +8,44 @@
 
 /* Begin PBXBuildFile section */
 		E49C261420B5ECF8006530A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49C261320B5ECF8006530A7 /* AppDelegate.swift */; };
-		E49C261620B5ECF8006530A7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49C261520B5ECF8006530A7 /* ViewController.swift */; };
+		E49C261620B5ECF8006530A7 /* PassageListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49C261520B5ECF8006530A7 /* PassageListTableViewController.swift */; };
 		E49C261920B5ECF8006530A7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E49C261720B5ECF8006530A7 /* Main.storyboard */; };
 		E49C261B20B5ECF9006530A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E49C261A20B5ECF9006530A7 /* Assets.xcassets */; };
 		E49C261E20B5ECF9006530A7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E49C261C20B5ECF9006530A7 /* LaunchScreen.storyboard */; };
+		E49C262E20B5FC66006530A7 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49C262D20B5FC66006530A7 /* CoreDataStack.swift */; };
+		E49C263120B5FC83006530A7 /* RavenCoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E49C262F20B5FC83006530A7 /* RavenCoreData.xcdatamodeld */; };
+		E49C263320B5FD66006530A7 /* Passage+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49C263220B5FD66006530A7 /* Passage+Convenience.swift */; };
+		E49C263520B5FDC2006530A7 /* SmartString.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49C263420B5FDC2006530A7 /* SmartString.swift */; };
+		E49C263720B5FDF6006530A7 /* PassageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49C263620B5FDF6006530A7 /* PassageController.swift */; };
+		E49C263920B5FE37006530A7 /* SmartStringBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49C263820B5FE37006530A7 /* SmartStringBuilder.swift */; };
+		E49C263B20B5FE55006530A7 /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49C263A20B5FE55006530A7 /* DateHelper.swift */; };
+		E49C263D20B5FE62006530A7 /* BlankCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49C263C20B5FE62006530A7 /* BlankCreator.swift */; };
+		E49C263F20B5FED5006530A7 /* PracticeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49C263E20B5FED5006530A7 /* PracticeCollectionViewCell.swift */; };
+		E49C264120B5FF0F006530A7 /* PassageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49C264020B5FF0F006530A7 /* PassageTableViewCell.swift */; };
+		E49C264320B5FF98006530A7 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49C264220B5FF98006530A7 /* AddViewController.swift */; };
+		E49C264520B65C8D006530A7 /* KeyboardHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49C264420B65C8D006530A7 /* KeyboardHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E49C261020B5ECF8006530A7 /* Raven.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Raven.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E49C261320B5ECF8006530A7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E49C261520B5ECF8006530A7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E49C261520B5ECF8006530A7 /* PassageListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassageListTableViewController.swift; sourceTree = "<group>"; };
 		E49C261820B5ECF8006530A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E49C261A20B5ECF9006530A7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E49C261D20B5ECF9006530A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E49C261F20B5ECF9006530A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E49C262D20B5FC66006530A7 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		E49C263020B5FC83006530A7 /* RavenCoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RavenCoreData.xcdatamodel; sourceTree = "<group>"; };
+		E49C263220B5FD66006530A7 /* Passage+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Passage+Convenience.swift"; sourceTree = "<group>"; };
+		E49C263420B5FDC2006530A7 /* SmartString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartString.swift; sourceTree = "<group>"; };
+		E49C263620B5FDF6006530A7 /* PassageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassageController.swift; sourceTree = "<group>"; };
+		E49C263820B5FE37006530A7 /* SmartStringBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartStringBuilder.swift; sourceTree = "<group>"; };
+		E49C263A20B5FE55006530A7 /* DateHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
+		E49C263C20B5FE62006530A7 /* BlankCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlankCreator.swift; sourceTree = "<group>"; };
+		E49C263E20B5FED5006530A7 /* PracticeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeCollectionViewCell.swift; sourceTree = "<group>"; };
+		E49C264020B5FF0F006530A7 /* PassageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassageTableViewCell.swift; sourceTree = "<group>"; };
+		E49C264220B5FF98006530A7 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
+		E49C264420B65C8D006530A7 /* KeyboardHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,13 +79,89 @@
 			isa = PBXGroup;
 			children = (
 				E49C261320B5ECF8006530A7 /* AppDelegate.swift */,
-				E49C261520B5ECF8006530A7 /* ViewController.swift */,
-				E49C261720B5ECF8006530A7 /* Main.storyboard */,
-				E49C261A20B5ECF9006530A7 /* Assets.xcassets */,
-				E49C261C20B5ECF9006530A7 /* LaunchScreen.storyboard */,
-				E49C261F20B5ECF9006530A7 /* Info.plist */,
+				E49C262520B5FBAE006530A7 /* CoreData */,
+				E49C262620B5FBBA006530A7 /* Models */,
+				E49C262720B5FBD8006530A7 /* Model Controllers */,
+				E49C262820B5FBE3006530A7 /* UI */,
+				E49C262920B5FBEB006530A7 /* Views */,
+				E49C262A20B5FBF1006530A7 /* View Controllers */,
+				E49C262B20B5FBF9006530A7 /* Helpers */,
+				E49C262C20B5FC00006530A7 /* Resources */,
 			);
 			path = Raven;
+			sourceTree = "<group>";
+		};
+		E49C262520B5FBAE006530A7 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				E49C262D20B5FC66006530A7 /* CoreDataStack.swift */,
+				E49C262F20B5FC83006530A7 /* RavenCoreData.xcdatamodeld */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		E49C262620B5FBBA006530A7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E49C263220B5FD66006530A7 /* Passage+Convenience.swift */,
+				E49C263420B5FDC2006530A7 /* SmartString.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E49C262720B5FBD8006530A7 /* Model Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E49C263620B5FDF6006530A7 /* PassageController.swift */,
+			);
+			path = "Model Controllers";
+			sourceTree = "<group>";
+		};
+		E49C262820B5FBE3006530A7 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				E49C261720B5ECF8006530A7 /* Main.storyboard */,
+				E49C261C20B5ECF9006530A7 /* LaunchScreen.storyboard */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		E49C262920B5FBEB006530A7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E49C263E20B5FED5006530A7 /* PracticeCollectionViewCell.swift */,
+				E49C264020B5FF0F006530A7 /* PassageTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E49C262A20B5FBF1006530A7 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E49C261520B5ECF8006530A7 /* PassageListTableViewController.swift */,
+				E49C264220B5FF98006530A7 /* AddViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		E49C262B20B5FBF9006530A7 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				E49C263820B5FE37006530A7 /* SmartStringBuilder.swift */,
+				E49C263A20B5FE55006530A7 /* DateHelper.swift */,
+				E49C263C20B5FE62006530A7 /* BlankCreator.swift */,
+				E49C264420B65C8D006530A7 /* KeyboardHelper.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		E49C262C20B5FC00006530A7 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E49C261A20B5ECF9006530A7 /* Assets.xcassets */,
+				E49C261F20B5ECF9006530A7 /* Info.plist */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,8 +235,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E49C261620B5ECF8006530A7 /* ViewController.swift in Sources */,
+				E49C263920B5FE37006530A7 /* SmartStringBuilder.swift in Sources */,
+				E49C262E20B5FC66006530A7 /* CoreDataStack.swift in Sources */,
+				E49C264520B65C8D006530A7 /* KeyboardHelper.swift in Sources */,
+				E49C263720B5FDF6006530A7 /* PassageController.swift in Sources */,
+				E49C263120B5FC83006530A7 /* RavenCoreData.xcdatamodeld in Sources */,
+				E49C264120B5FF0F006530A7 /* PassageTableViewCell.swift in Sources */,
+				E49C261620B5ECF8006530A7 /* PassageListTableViewController.swift in Sources */,
 				E49C261420B5ECF8006530A7 /* AppDelegate.swift in Sources */,
+				E49C263F20B5FED5006530A7 /* PracticeCollectionViewCell.swift in Sources */,
+				E49C263B20B5FE55006530A7 /* DateHelper.swift in Sources */,
+				E49C263520B5FDC2006530A7 /* SmartString.swift in Sources */,
+				E49C263320B5FD66006530A7 /* Passage+Convenience.swift in Sources */,
+				E49C264320B5FF98006530A7 /* AddViewController.swift in Sources */,
+				E49C263D20B5FE62006530A7 /* BlankCreator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,12 +394,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CJKY4ZP9T7;
-				INFOPLIST_FILE = Raven/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Raven/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.Raven;
+				PRODUCT_BUNDLE_IDENTIFIER = com.brocktyler.Raven;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -300,12 +412,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CJKY4ZP9T7;
-				INFOPLIST_FILE = Raven/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Raven/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.Raven;
+				PRODUCT_BUNDLE_IDENTIFIER = com.brocktyler.Raven;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -334,6 +446,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		E49C262F20B5FC83006530A7 /* RavenCoreData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				E49C263020B5FC83006530A7 /* RavenCoreData.xcdatamodel */,
+			);
+			currentVersion = E49C263020B5FC83006530A7 /* RavenCoreData.xcdatamodel */;
+			path = RavenCoreData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = E49C260820B5ECF7006530A7 /* Project object */;
 }
