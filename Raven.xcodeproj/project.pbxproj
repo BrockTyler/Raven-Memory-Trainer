@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		E49C261420B5ECF8006530A7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49C261320B5ECF8006530A7 /* AppDelegate.swift */; };
-		E49C261620B5ECF8006530A7 /* PassageListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49C261520B5ECF8006530A7 /* PassageListTableViewController.swift */; };
 		E49C261920B5ECF8006530A7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E49C261720B5ECF8006530A7 /* Main.storyboard */; };
 		E49C261B20B5ECF9006530A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E49C261A20B5ECF9006530A7 /* Assets.xcassets */; };
 		E49C261E20B5ECF9006530A7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E49C261C20B5ECF9006530A7 /* LaunchScreen.storyboard */; };
@@ -24,12 +23,13 @@
 		E49C264120B5FF0F006530A7 /* PassageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49C264020B5FF0F006530A7 /* PassageTableViewCell.swift */; };
 		E49C264320B5FF98006530A7 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49C264220B5FF98006530A7 /* AddViewController.swift */; };
 		E49C264520B65C8D006530A7 /* KeyboardHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49C264420B65C8D006530A7 /* KeyboardHelper.swift */; };
+		E4B76FBE20CE92440096D82C /* PracticeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B76FBD20CE92440096D82C /* PracticeViewController.swift */; };
+		E4B76FC020CEA3D00096D82C /* PassageListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B76FBF20CEA3D00096D82C /* PassageListTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E49C261020B5ECF8006530A7 /* Raven.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Raven.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E49C261320B5ECF8006530A7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E49C261520B5ECF8006530A7 /* PassageListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassageListTableViewController.swift; sourceTree = "<group>"; };
 		E49C261820B5ECF8006530A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E49C261A20B5ECF9006530A7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E49C261D20B5ECF9006530A7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -46,6 +46,8 @@
 		E49C264020B5FF0F006530A7 /* PassageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassageTableViewCell.swift; sourceTree = "<group>"; };
 		E49C264220B5FF98006530A7 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 		E49C264420B65C8D006530A7 /* KeyboardHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardHelper.swift; sourceTree = "<group>"; };
+		E4B76FBD20CE92440096D82C /* PracticeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeViewController.swift; sourceTree = "<group>"; };
+		E4B76FBF20CEA3D00096D82C /* PassageListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassageListTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,8 +131,8 @@
 		E49C262920B5FBEB006530A7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				E49C263E20B5FED5006530A7 /* PracticeCollectionViewCell.swift */,
 				E49C264020B5FF0F006530A7 /* PassageTableViewCell.swift */,
+				E49C263E20B5FED5006530A7 /* PracticeCollectionViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -138,8 +140,9 @@
 		E49C262A20B5FBF1006530A7 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				E49C261520B5ECF8006530A7 /* PassageListTableViewController.swift */,
+				E4B76FBF20CEA3D00096D82C /* PassageListTableViewController.swift */,
 				E49C264220B5FF98006530A7 /* AddViewController.swift */,
+				E4B76FBD20CE92440096D82C /* PracticeViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -236,12 +239,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				E49C263920B5FE37006530A7 /* SmartStringBuilder.swift in Sources */,
+				E4B76FC020CEA3D00096D82C /* PassageListTableViewController.swift in Sources */,
 				E49C262E20B5FC66006530A7 /* CoreDataStack.swift in Sources */,
 				E49C264520B65C8D006530A7 /* KeyboardHelper.swift in Sources */,
+				E4B76FBE20CE92440096D82C /* PracticeViewController.swift in Sources */,
 				E49C263720B5FDF6006530A7 /* PassageController.swift in Sources */,
 				E49C263120B5FC83006530A7 /* RavenCoreData.xcdatamodeld in Sources */,
 				E49C264120B5FF0F006530A7 /* PassageTableViewCell.swift in Sources */,
-				E49C261620B5ECF8006530A7 /* PassageListTableViewController.swift in Sources */,
 				E49C261420B5ECF8006530A7 /* AppDelegate.swift in Sources */,
 				E49C263F20B5FED5006530A7 /* PracticeCollectionViewCell.swift in Sources */,
 				E49C263B20B5FE55006530A7 /* DateHelper.swift in Sources */,

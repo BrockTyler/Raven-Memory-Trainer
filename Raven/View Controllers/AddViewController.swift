@@ -30,30 +30,6 @@ class AddViewController: UIViewController, UITextViewDelegate {
         }
     }
     
-    func setupViews() {
-        
-        title = "Add Passage"
-        self.view.backgroundColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
-        
-        clearButton.backgroundColor = .white
-        clearButton.layer.cornerRadius = 10
-        clearButton.clipsToBounds = true
-        clearButton.tintColor = #colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1)
-        clearButton.layer.borderWidth = 1.0
-        clearButton.layer.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
-        
-        textTextView.layer.cornerRadius = 5
-        textTextView.clipsToBounds = true
-        textTextView.layer.borderWidth = 1.0
-        textTextView.layer.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
-        
-        titleTextField.layer.cornerRadius = 5
-        titleTextField.clipsToBounds = true
-        titleTextField.layer.borderWidth = 1.0
-        titleTextField.layer.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
-        
-    }
-    
     // MARK: - Button Actions
     
     @IBAction func saveButtonTapped(_ sender: AnyObject) {
@@ -85,6 +61,32 @@ class AddViewController: UIViewController, UITextViewDelegate {
         if (textTextView.text.contains("Tap here to type or paste in your text.")) {
             textTextView.text = ""
         }
+    }
+    
+    // MARK: - Helper Methods
+    
+    func setupViews() {
+        
+        title = "Add Passage"
+        self.view.backgroundColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
+        
+        clearButton.backgroundColor = .white
+        clearButton.layer.cornerRadius = 10
+        clearButton.clipsToBounds = true
+        clearButton.tintColor = #colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1)
+        clearButton.layer.borderWidth = 1.0
+        clearButton.layer.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        
+        textTextView.layer.cornerRadius = 5
+        textTextView.clipsToBounds = true
+        textTextView.layer.borderWidth = 1.0
+        textTextView.layer.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        
+        titleTextField.layer.cornerRadius = 5
+        titleTextField.clipsToBounds = true
+        titleTextField.layer.borderWidth = 1.0
+        titleTextField.layer.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        
     }
 }
 

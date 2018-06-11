@@ -1,18 +1,19 @@
 //
-//  ViewController.swift
+//  PassageListTableViewController.swift
 //  Raven
 //
-//  Created by brock tyler on 5/23/18.
+//  Created by brock tyler on 6/11/18.
 //  Copyright © 2018 Brock Tyler. All rights reserved.
 //
 
 import UIKit
 import CoreData
 
-class PassageListTableViewController: UITableViewController, UISearchControllerDelegate, UISearchBarDelegate {
+class PassageListTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchControllerDelegate, UISearchBarDelegate {
     
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet weak var passageListTableView: UITableView!
     
     let searchController = UISearchController(searchResultsController: nil)
     var filteredPassages = [Passage]()
@@ -39,6 +40,9 @@ class PassageListTableViewController: UITableViewController, UISearchControllerD
             }
             PassageListTableViewController.practiceView = false
         }
+        
+        passageListTableView.delegate = self
+        passageListTableView.dataSource = self
         
         super.viewDidLoad()
         setupSearchBar()
@@ -67,7 +71,7 @@ class PassageListTableViewController: UITableViewController, UISearchControllerD
             PassageListTableViewController.practiceView = false
         }
         
-        tableView.reloadData()
+        passageListTableView.reloadData()
     }
     
     func setupViews() {
@@ -81,7 +85,7 @@ class PassageListTableViewController: UITableViewController, UISearchControllerD
     
     // MARK: - Table view data source
     
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         var numRows = 0
         
@@ -96,7 +100,7 @@ class PassageListTableViewController: UITableViewController, UISearchControllerD
     }
     
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "passageCell", for: indexPath) as? PassageTableViewCell else { return UITableViewCell() }
         
@@ -112,7 +116,7 @@ class PassageListTableViewController: UITableViewController, UISearchControllerD
     }
     
     // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             
             let passage = fetchedResultsController.object(at: indexPath)
@@ -146,7 +150,7 @@ class PassageListTableViewController: UITableViewController, UISearchControllerD
                 print("Error loading from core data: \(error.localizedDescription)")
             }
             PassageListTableViewController.practiceView = false
-            tableView.reloadData()
+            passageListTableView.reloadData()
             
         } else if segmentedControl.selectedSegmentIndex == 2 {
             
@@ -164,7 +168,7 @@ class PassageListTableViewController: UITableViewController, UISearchControllerD
                 print("Error loading from core data: \(error.localizedDescription)")
             }
             PassageListTableViewController.practiceView = true
-            tableView.reloadData()
+            passageListTableView.reloadData()
             
         } else {
             
@@ -182,7 +186,7 @@ class PassageListTableViewController: UITableViewController, UISearchControllerD
                 print("Error loading from core data: \(error.localizedDescription)")
             }
             PassageListTableViewController.practiceView = false
-            tableView.reloadData()
+            passageListTableView.reloadData()
         }
     }
     
@@ -190,10 +194,10 @@ class PassageListTableViewController: UITableViewController, UISearchControllerD
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        if segue.identifier == "toMenuTabController" {
+        if segue.identifier == "toPracticeVC" {
             
-            if let destinationVC = segue.destination as? MenuTabBarController,
-                let index = tableView.indexPathForSelectedRow {
+            if let destinationVC = segue.destination as? PracticeViewController,
+                let index = passageListTableView.indexPathForSelectedRow {
                 
                 if searchBar.text != "" {
                     let filteredPassage = filteredPassages[index.row]
@@ -223,7 +227,7 @@ class PassageListTableViewController: UITableViewController, UISearchControllerD
         
         filteredPassages = passages.filter{ ($0.title?.lowercased().contains(searchText.lowercased()))! }
         
-        tableView.reloadData()
+        passageListTableView.reloadData()
         
     }
     
@@ -244,12 +248,12 @@ extension PassageListTableViewController: NSFetchedResultsControllerDelegate {
     
     // tell the tableview I'm about to do a bunch of stuff, hold up.
     func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
-        tableView.beginUpdates()
+        passageListTableView.beginUpdates()
     }
     
     // tell the tableView I finish doing my stuff, you do your thing.
     func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
-        tableView.endUpdates()
+        passageListTableView.endUpdates()
     }
     
     // I just created, read, updated, or deleted something
@@ -258,17 +262,17 @@ extension PassageListTableViewController: NSFetchedResultsControllerDelegate {
         switch type {
         case .insert:
             guard let newIndexPath = newIndexPath else { return }
-            tableView.insertRows(at: [newIndexPath], with: .automatic)
+            passageListTableView.insertRows(at: [newIndexPath], with: .automatic)
         case .delete:
             guard let oldIndexPath = indexPath else { return }
-            tableView.deleteRows(at: [oldIndexPath], with: .automatic)
+            passageListTableView.deleteRows(at: [oldIndexPath], with: .automatic)
         case.update:
             guard let oldIndexPath = indexPath else { return }
-            tableView.reloadRows(at: [oldIndexPath], with: .automatic)
+            passageListTableView.reloadRows(at: [oldIndexPath], with: .automatic)
         case.move:
             guard let oldIndexPath = indexPath,
                 let newIndexPath = indexPath else { return }
-            tableView.moveRow(at: oldIndexPath, to: newIndexPath)
+            passageListTableView.moveRow(at: oldIndexPath, to: newIndexPath)
         }
     }
     
@@ -279,12 +283,11 @@ extension PassageListTableViewController: NSFetchedResultsControllerDelegate {
         
         switch type {
         case .insert:
-            tableView.insertSections(indexSet, with: .automatic)
+            passageListTableView.insertSections(indexSet, with: .automatic)
         case .delete:
-            tableView.deleteSections(indexSet, with: .automatic)
+            passageListTableView.deleteSections(indexSet, with: .automatic)
         default:
             return
         }
     }
 }
-

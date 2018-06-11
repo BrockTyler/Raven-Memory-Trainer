@@ -15,32 +15,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+//        UserDefaults.standard.set(false, forKey: "didCreateSamplePassage")
+        
+        let title = "The Raven"
+        let text = "\"Once upon a midnight dreary, while I pondered, weak and weary, \nOver many a quaint and curious volume of forgotten lore, \nWhile I nodded, nearly napping, suddenly there came a tapping, \nAs of some one gently rapping, rapping at my chamber door. \nTis some visitor,\" I muttered, \"tapping at my chamber door — \nOnly this, and nothing more.\" \n\nAh, distinctly I remember it was in the bleak December, \nAnd each separate dying ember wrought its ghost upon the floor. \nEagerly I wished the morrow; — vainly I had sought to borrow \nFrom my books surcease of sorrow — sorrow for the lost Lenore — \nFor the rare and radiant maiden whom the angels name Lenore — \nNameless here for evermore. \n\nAnd the silken sad uncertain rustling of each purple curtain \nThrilled me — filled me with fantastic terrors never felt before; \nSo that now, to still the beating of my heart, I stood repeating, \nTis some visitor entreating entrance at my chamber door — \nSome late visitor entreating entrance at my chamber door; — \nThis it is, and nothing more.\" \n\nPresently my soul grew stronger; hesitating then no longer, \nSir,\" said I, \"or Madam, truly your forgiveness I implore; \nBut the fact is I was napping, and so gently you came rapping, \nAnd so faintly you came tapping, tapping at my chamber door, \nThat I scarce was sure I heard you\"— here I opened wide the door; — \nDarkness there, and nothing more."
+        
+        PassageController.createSamplePassage(title: title, text: text)
+        
         return true
     }
-
-    func applicationWillResignActive(_ application: UIApplication) {
-        // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
-        // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
-    }
-
-    func applicationDidEnterBackground(_ application: UIApplication) {
-        // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
-        // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
-    }
-
-    func applicationWillEnterForeground(_ application: UIApplication) {
-        // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
-    }
-
-    func applicationDidBecomeActive(_ application: UIApplication) {
-        // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
-    }
-
-    func applicationWillTerminate(_ application: UIApplication) {
-        // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
-    }
-
 
 }
 
