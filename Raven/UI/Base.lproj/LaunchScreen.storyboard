@@ -1,7 +1,13 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -13,13 +19,60 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LeavesBlurred" translatesAutoresizingMaskIntoConstraints="NO" id="xer-Jv-H9e">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <visualEffectView opaque="NO" alpha="0.90000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4NI-aS-6wH">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="7jc-3x-lKU">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <imageView clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Raven" translatesAutoresizingMaskIntoConstraints="NO" id="D4a-uE-NmX">
+                                            <rect key="frame" x="93" y="187" width="188" height="188"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <accessibility key="accessibilityConfiguration">
+                                                <accessibilityTraits key="traits" image="YES" notEnabled="YES"/>
+                                            </accessibility>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="D4a-uE-NmX" secondAttribute="height" multiplier="1:1" id="vcQ-ks-Xfr"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="D4a-uE-NmX" firstAttribute="centerX" secondItem="7jc-3x-lKU" secondAttribute="centerX" id="O48-B1-usv"/>
+                                        <constraint firstItem="D4a-uE-NmX" firstAttribute="width" secondItem="7jc-3x-lKU" secondAttribute="width" multiplier="0.5" id="kWm-vl-Ztw"/>
+                                        <constraint firstItem="D4a-uE-NmX" firstAttribute="top" secondItem="7jc-3x-lKU" secondAttribute="top" constant="187" id="syG-bu-lKJ"/>
+                                    </constraints>
+                                </view>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4NI-aS-6wH" secondAttribute="trailing" id="BYe-VD-1lt"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xer-Jv-H9e" secondAttribute="trailing" id="CW4-oR-AIc"/>
+                            <constraint firstItem="4NI-aS-6wH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="IfD-Xo-YUk"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="4NI-aS-6wH" secondAttribute="bottom" id="RVq-4J-cGO"/>
+                            <constraint firstItem="xer-Jv-H9e" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="-20" id="S7X-B5-lmg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="xer-Jv-H9e" secondAttribute="bottom" id="TJY-c1-263"/>
+                            <constraint firstItem="xer-Jv-H9e" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="aSg-gO-kYT"/>
+                            <constraint firstItem="4NI-aS-6wH" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="-20" id="mfH-mI-gHC"/>
+                            <constraint firstItem="xer-Jv-H9e" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="-20" id="yV3-Gz-VEv"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="52" y="374.66266866566718"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="LeavesBlurred" width="679" height="1333"/>
+        <image name="Raven" width="348" height="415"/>
+    </resources>
+    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
 </document>

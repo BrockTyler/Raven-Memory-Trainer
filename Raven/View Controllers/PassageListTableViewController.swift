@@ -79,6 +79,10 @@ class PassageListTableViewController: UIViewController, UITableViewDelegate, UIT
         self.navigationController?.navigationBar.isHidden = false
         self.navigationController?.navigationBar.tintColor = #colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1)
         self.segmentedControl.tintColor = #colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1)
+        self.segmentedControl.clipsToBounds = true
+        self.segmentedControl.layer.cornerRadius = 0
+        self.segmentedControl.layer.borderWidth = 1.0
+        self.segmentedControl.layer.borderColor = #colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1)
         self.searchBar.barTintColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
         
     }
