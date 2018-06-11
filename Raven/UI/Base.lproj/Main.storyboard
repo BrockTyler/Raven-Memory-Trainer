@@ -212,7 +212,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Gq8-Tk-m62">
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Gq8-Tk-m62">
                                         <rect key="frame" x="18.5" y="10" width="337.5" height="30"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CPI-fk-zqh">
@@ -222,7 +222,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Omj-GU-1At">
-                                                <rect key="frame" x="50" y="0.0" width="165.5" height="31"/>
+                                                <rect key="frame" x="55" y="0.0" width="155.5" height="31"/>
                                                 <connections>
                                                     <action selector="sliderMoved:" destination="SgR-aU-8e1" eventType="valueChanged" id="927-Wk-R55"/>
                                                 </connections>
@@ -345,6 +345,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="phL-tU-L8a"/>
+        <segue reference="5xw-t5-ypA"/>
     </inferredMetricsTieBreakers>
 </document>

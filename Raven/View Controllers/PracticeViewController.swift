@@ -32,7 +32,7 @@ class PracticeViewController: UIViewController, UICollectionViewDataSource, UICo
         guard let text = passage.text else { return }
         let percent = blankSlider.value
         let displayPercent = (Int(percent * 100))
-        blanksSliderLabel.text = "\(displayPercent)%"
+        blanksSliderLabel.text = "  \(displayPercent)%  "
         
         displayArr = BlankCreator.shared.initBlankArrWithRandomization(text: text, percent: percent)
         trueArr = BlankCreator.shared.getNonBlankArray(text: text)
@@ -52,7 +52,7 @@ class PracticeViewController: UIViewController, UICollectionViewDataSource, UICo
         let percent = blankSlider.value
         displayArr = BlankCreator.shared.changeNumBlanks(percent: percent)
         let displayPercent = (Int(percent * 100))
-        blanksSliderLabel.text = "\(displayPercent)%"
+        blanksSliderLabel.text = "  \(displayPercent)%  "
         practiceCollectionView.reloadData()
     }
     
@@ -133,6 +133,8 @@ class PracticeViewController: UIViewController, UICollectionViewDataSource, UICo
         self.title = "Practice"
         self.view.backgroundColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
         
+        editBarButtonItem.tintColor = #colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1)
+        
         shuffleBlanksButton.backgroundColor = .white
         shuffleBlanksButton.layer.cornerRadius = 10
         shuffleBlanksButton.clipsToBounds = true
@@ -140,12 +142,17 @@ class PracticeViewController: UIViewController, UICollectionViewDataSource, UICo
         shuffleBlanksButton.layer.borderWidth = 1.0
         shuffleBlanksButton.layer.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
         
-        practiceCollectionView.layer.cornerRadius = 5
+        practiceCollectionView.layer.cornerRadius = 0
         practiceCollectionView.clipsToBounds = true
         practiceCollectionView.layer.borderWidth = 1.0
         practiceCollectionView.layer.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
         
         blanksSliderLabel.textColor = .black
+        blanksSliderLabel.layer.borderColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        blanksSliderLabel.layer.cornerRadius = 10
+        blanksSliderLabel.clipsToBounds = true
+        blanksSliderLabel.layer.borderWidth = 1.0
+        
         
         titleLabel.backgroundColor = .white
         titleLabel.layer.borderWidth = 0.0
